@@ -1,0 +1,92 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int numOfpeople = int.Parse(Console.ReadLine());
+		string groupOF = Console.ReadLine();
+		string day = Console.ReadLine();
+		
+		if(groupOF == "Students")
+		{
+			if( day == "Sunday")
+			{
+				double money = numOfpeople * 10.46;
+				if (numOfpeople >=30)
+					money = money - (money*0.15);
+				Console.WriteLine ($"Total price: {money:f2}");
+			}
+			else if( day == "Saturday")
+			{
+				double money = numOfpeople * 9.80;
+				if (numOfpeople >=30)
+					money = money - (money*0.15);
+				Console.WriteLine ($"Total price: {money:f2}");
+			}
+						else if( day == "Friday")
+			{
+				double money = numOfpeople * 8.45;
+				if (numOfpeople >=30)
+					money = money - (money*0.15);
+				Console.WriteLine ($"Total price: {money:f2}");
+			}
+		}
+		
+		
+		if(groupOF == "Business")
+		{
+			if( day == "Sunday")
+			{
+				
+				if (numOfpeople >=100)
+					numOfpeople = numOfpeople - 10;
+				double money = numOfpeople * 16;
+				Console.WriteLine ($"Total price: {money:f2}");
+			}
+			else if( day == "Saturday")
+			{
+				
+				if (numOfpeople >=100)
+					numOfpeople = numOfpeople - 10;
+				double money = numOfpeople * 15.60;
+				Console.WriteLine ($"Total price: {money:f2}");
+			}
+						else if( day == "Friday")
+			{
+				
+				if (numOfpeople >=100)
+					numOfpeople = numOfpeople - 10;
+							double money = numOfpeople * 10.90;
+				Console.WriteLine ($"Total price: {money:f2}");
+			}
+		}
+		
+		if(groupOF == "Regular")
+		{
+			if( day == "Sunday")
+			{
+				double money = numOfpeople * 22.50;
+				if (numOfpeople >=10 && numOfpeople <=20 )
+					money = money - (money*0.05);
+				Console.WriteLine ($"Total price: {money:f2}");
+			}
+			else if( day == "Saturday")
+			{
+				double money = numOfpeople * 20;
+				if (numOfpeople >=10 && numOfpeople <=20 )
+					money = money - (money*0.05);
+				Console.WriteLine ($"Total price: {money:f2}");
+			}
+						else if( day == "Friday")
+			{
+				double money = numOfpeople * 15;
+				if (numOfpeople >=10 && numOfpeople <=20 )
+					money = money - (money*0.05);
+				Console.WriteLine ($"Total price: {money:f2}");
+			}
+		}
+		
+        
+	}
+}

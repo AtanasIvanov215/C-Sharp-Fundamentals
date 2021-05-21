@@ -1,0 +1,29 @@
+using System;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int lostgames = int.Parse(Console.ReadLine());
+            double headetPrice = double.Parse(Console.ReadLine());
+            double mousePrice = double.Parse(Console.ReadLine());
+            double keybordPrice = double.Parse(Console.ReadLine());
+            double displayPrice = double.Parse(Console.ReadLine());
+
+            double trashheadset = lostgames / 2;
+            trashheadset = Math.Floor(trashheadset);
+            double trashmouse = lostgames / 3;
+            trashmouse = Math.Floor(trashmouse);
+            double trashKeybord = lostgames / 6;
+            trashKeybord = Math.Floor(trashKeybord);
+            double trashDisplay = lostgames / 12;
+            trashDisplay = Math.Floor(trashDisplay);
+
+            double totaltrash = (trashheadset * headetPrice) + (trashmouse * mousePrice) + (trashKeybord * keybordPrice) + (trashDisplay * displayPrice);
+
+            Console.WriteLine($"Rage expenses: {totaltrash:f2} lv.");
+        }
+    }
+}

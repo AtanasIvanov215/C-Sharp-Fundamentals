@@ -1,0 +1,85 @@
+using System;
+
+					
+public class Program
+{
+	public static void Main()
+	{
+		  string input = Console.ReadLine();
+            double sum = 0;
+            double price = 0;
+            double pricetotal = 0;
+
+            while(input != "Start")
+            {
+                double totalCoin = double.Parse(input);
+                if (totalCoin == 0.1 ||
+                    totalCoin == 0.2 ||
+                    totalCoin == 0.5 ||
+                    totalCoin == 1 || totalCoin == 2)
+                {
+					sum += totalCoin;  
+                }
+                else
+                Console.WriteLine($"Cannot accept {input}");
+				input = Console.ReadLine();
+            }
+		if(input == "Start")
+			input = Console.ReadLine();
+            while(input != "End" )
+            {
+                
+                if (input == "Nuts" )
+                {
+                    price = 2;
+					
+                }
+                else if (input == "Water")
+                {
+                    price = 0.7;
+					
+                }
+                else if (input == "Soda" )
+                {
+                    price = 0.8;
+					
+                }
+                else if (input == "Crisps")
+                {
+                    price = 1.5;
+					
+                }
+                else if (input == "Coke" )
+                {
+                    price = 1.0;
+					
+                }
+else
+{
+                    Console.WriteLine("Invalid product");
+     
+}
+				
+                pricetotal += price;
+              if(sum > pricetotal || sum == pricetotal)
+			  {
+				  if(input == "Nuts" || input == "Soda" ||input == "Crisps" || input == "Water" || input == "Coke")
+                    Console.WriteLine($"Purchased {input.ToLower()}");
+			  }
+				else
+				{
+					  Console.WriteLine("Sorry, not enough money");
+				pricetotal -= price;
+				}
+				input = Console.ReadLine();
+            }
+		if (input == "End")
+		{
+			if( (sum - pricetotal) >= 0)
+			{
+                    double change = sum - pricetotal;
+                    Console.WriteLine($"Change: {change:f2}");
+			}
+		}
+	}
+}
