@@ -1,0 +1,155 @@
+using System;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Linq;
+using System.Collections.Generic;
+public class Program
+{
+	public static void Main()
+	{
+		string[] games = {"OutFall 4", "CS: OG", "Zplinter Zell", "Honored 2", "RoverWatch", "RoverWatch Origins Edition"};
+	double price = double.Parse(Console.ReadLine());
+		double sum = 0;
+		string input = Console.ReadLine();
+		while(input != "Game Time")
+		{
+			if( games.Contains(input))
+			{
+				if(price <=0)
+				{
+					Console.WriteLine("Out of money!" );
+				}
+				if(input == "OutFall 4" && price > 0)
+				{
+					price-= 39.99;
+					sum +=39.99;
+					if(price < 0)
+					{
+						Console.WriteLine("Too Expensive");
+						price += 39.99;
+						sum -= 39.99;
+					}
+					else
+					{
+						Console.WriteLine($"Bought {input}");
+						if(price <=0)
+						{
+							Console.WriteLine("Out of money!");
+							break;
+						}
+					}
+				}
+				else if(input =="CS: OG" && price > 0)
+				{
+					price-= 15.99;
+					sum +=15.99;
+					if(price <0)
+					{
+						Console.WriteLine("Too Expensive");
+						price += 15.99;
+						sum -= 15.99;
+					}
+					else
+					{
+						Console.WriteLine($"Bought {input}");
+						if(price <=0)
+						{
+							Console.WriteLine("Out of money!");
+							break;
+						}
+					}
+				}
+				else if(input =="Zplinter Zell"&& price >0 )
+				{
+					price-= 19.99;
+					sum +=19.99;
+					if(price < 0)
+					{
+						Console.WriteLine("Too Expensive");
+						price += 19.99;
+						sum -= 19.99;
+					}
+					else
+					{
+						Console.WriteLine($"Bought {input}");
+						if(price <=0)
+						{
+							Console.WriteLine("Out of money!");
+							break;
+						}
+					}
+				}
+				else if(input =="Honored 2"&& price >0 )
+				{
+					price-= 59.99;
+					sum +=59.99;
+					if(price <0)
+					{
+						Console.WriteLine("Too Expensive");
+						price += 59.99;
+						sum -= 59.99;
+					}
+					else
+					{
+						Console.WriteLine($"Bought {input}");
+						if(price <=0)
+						{
+							Console.WriteLine("Out of money!");
+							break;
+						}
+					}
+				}
+				else if(input =="RoverWatch" && price > 0)
+				{
+					price-= 29.99;
+					sum +=29.99;
+					if(price < 0)
+					{
+						Console.WriteLine("Too Expensive");
+						price += 29.99;
+						sum -= 29.99;
+					}
+					else
+					{
+						Console.WriteLine($"Bought {input}");
+						if(price <=0)
+						{
+							Console.WriteLine("Out of money!");
+							break;
+						}
+					}
+				}
+				else if(input =="RoverWatch Origins Edition"&& price > 0)
+				{
+					price-= 39.99;
+					sum +=39.99;
+					if(price <=0)
+					{
+						Console.WriteLine("Too Expensive");
+						price += 39.99;
+						sum -= 39.99;
+					}
+					else
+					{
+						Console.WriteLine($"Bought {input}");
+						if(price <=0)
+						{
+							Console.WriteLine("Out of money!");
+							break;
+						}
+					}
+				}
+				
+			}
+			else
+			{
+				Console.WriteLine("Not Found");
+			}
+			
+			 input = Console.ReadLine();
+		}
+		if(price > 0)
+			Console.WriteLine($"Total spent: ${sum:f2}. Remaining: ${price:f2}");
+		
+	}
+}

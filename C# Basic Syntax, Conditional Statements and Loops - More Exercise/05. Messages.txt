@@ -1,0 +1,37 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	int input = int.Parse(Console.ReadLine());
+		string message= "";
+		for(int i = 1; i <= input; i++)
+		{
+			string letters= Console.ReadLine();
+			int numoflet = letters.Length;
+			int digit = letters[0] - '0';
+			
+			if(digit == 8 || digit ==9)
+			{
+				int offset = (digit -2)*3 +1;
+				int letterinde = (offset + numoflet -1);
+				char letter1 = (char)(97 + letterinde);
+				message += letter1;
+			}
+			else if(digit ==0)
+			{
+				message += " ";
+			}
+			else
+			{
+				int offset = (digit -2)*3;
+				int letterinde = (offset + numoflet -1);
+				char letter1 = (char)(97 + letterinde);
+				message += letter1;
+				
+			}			
+		}
+	Console.WriteLine(message);
+    }
+}
