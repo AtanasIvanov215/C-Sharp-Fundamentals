@@ -1,0 +1,27 @@
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Numerics;
+
+namespace Homework
+{
+ 
+    class Program
+    {
+        static void Main(string[] args)
+        {
+			int hour = int.Parse(Console.ReadLine());
+			int minutes = int.Parse(Console.ReadLine());
+
+			int presenttime = (hour * 60) + minutes + 30;
+			int presenthour = presenttime / 60;
+			int presentminutes = presenttime % 60;
+			if (presenthour > 23)
+			{
+				presenthour = 0;
+			}
+
+			Console.WriteLine($"{presenthour}:{presentminutes:d2}");
+		}
+    }
+}
