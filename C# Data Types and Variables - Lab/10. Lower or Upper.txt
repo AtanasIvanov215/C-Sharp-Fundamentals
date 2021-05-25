@@ -1,0 +1,23 @@
+using System;
+using System.Numerics;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char firsstCH = char.Parse(Console.ReadLine());
+
+            if (Char.IsLower(firsstCH))
+            {
+                Console.WriteLine("lower-case");
+            }
+            else if (Char.IsUpper(firsstCH))
+            {
+                Console.WriteLine("upper-case");
+            }
+        }
+
+    }
+}

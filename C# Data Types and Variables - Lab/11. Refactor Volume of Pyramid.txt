@@ -1,0 +1,23 @@
+using System;
+using System.Numerics;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double lenght = 0;
+            double width = 0;
+            double height = 0;
+            
+            lenght = double.Parse(Console.ReadLine());           
+            width = double.Parse(Console.ReadLine());
+            height = double.Parse(Console.ReadLine());
+            double volume = (lenght * width * height)/3;
+            Console.WriteLine($"Length: Width: Height: Pyramid Volume: {volume:f2}");
+
+        }
+
+    }
+}

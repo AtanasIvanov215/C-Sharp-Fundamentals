@@ -1,0 +1,19 @@
+using System;
+using System.Numerics;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string city = Console.ReadLine();
+            double population = double.Parse(Console.ReadLine());
+            int sqMiles = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Town {city} has population of {population} and area {sqMiles} square km.");
+           
+        }
+
+    }
+}

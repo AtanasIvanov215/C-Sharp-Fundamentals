@@ -1,0 +1,21 @@
+using System;
+using System.Numerics;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string word = "";
+            char a1 =char.Parse(Console.ReadLine());
+            word += a1;
+            char a2 = char.Parse(Console.ReadLine());
+            word += a2;
+            char a3 = char.Parse(Console.ReadLine());
+            word += a3;
+            Console.WriteLine(word);
+        }
+
+    }
+}

@@ -1,0 +1,11 @@
+using System;
+					
+public class Program
+{
+	public static void Main()	
+	{
+		decimal dollarS = decimal.Parse(Console.ReadLine());
+		decimal pundS = dollarS * 1.31m;
+		Console.WriteLine($"{pundS:f3}");
+    }
+}

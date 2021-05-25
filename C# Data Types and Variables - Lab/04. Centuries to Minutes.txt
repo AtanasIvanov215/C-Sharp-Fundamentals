@@ -1,0 +1,22 @@
+using System;
+using System.Numerics;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int cent = int.Parse(Console.ReadLine());
+
+            int year = cent * 100;
+            double day =Math.Truncate(year * 365.2422);
+            double hour = day * 24;
+            BigInteger minutes = (int)hour * 60;
+            Console.WriteLine($"{cent} centuries = {year} years = {day} days = {hour} hours = {minutes} minutes");
+           
+        }
+
+    }
+}

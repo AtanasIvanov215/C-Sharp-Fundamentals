@@ -1,0 +1,11 @@
+using System;
+					
+public class Program
+{
+	public static void Main()	
+	{
+		int metres = int.Parse(Console.ReadLine());
+		decimal kilom = metres/ 1000m;
+		Console.WriteLine($"{kilom:f2}");
+    }
+}
