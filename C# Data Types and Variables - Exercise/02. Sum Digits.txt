@@ -1,0 +1,21 @@
+using System;
+					
+public class Program
+{
+	public static void Main()	
+	{
+		int first = int.Parse(Console.ReadLine());
+		 string num = first.ToString();
+		int lenghtOF = num.Length;
+		int sum = 0;
+		
+		for(int i = 1; i <= lenghtOF; i++)
+		{
+			int number1 = first % 10;
+			first /= 10;
+			sum += number1;
+			
+		}
+		Console.WriteLine(sum); 
+    }
+}
