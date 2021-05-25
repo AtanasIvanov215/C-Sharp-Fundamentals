@@ -1,0 +1,20 @@
+using System;
+using System.Numerics;
+using System.Text.RegularExpressions;
+using System.Linq;
+using System.Collections.Generic;
+public class Program
+{
+	public static void Main()
+	{
+		double num1 = double.Parse(Console.ReadLine());
+		double num2 = double.Parse(Console.ReadLine());
+		
+		double num1conv = num1 / 0.000001;
+		double num2conv = num2 / 0.000001;
+		if(num1conv - num2conv >= 1 || num2conv - num1conv >= 1)
+			Console.WriteLine("False");
+		else
+			Console.WriteLine("True");
+	}	
+}
