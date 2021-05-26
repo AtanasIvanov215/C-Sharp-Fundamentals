@@ -1,0 +1,25 @@
+using System;
+using System.Linq;
+
+class HolidaysBetweenTwoDates
+{
+    static void Main()
+    {
+
+        var numbers = Console.ReadLine().Split(' ').Select(double.Parse).ToArray();
+        double[] roundNums = new double[numbers.Length];
+
+		for(int i = 0; i <= numbers.Length-1;i++)
+        {
+            roundNums[i] = (double)Math.Round(numbers[i], MidpointRounding.AwayFromZero);
+            if(roundNums[i] == 0)
+            { 
+                roundNums[i] = -0;
+            }
+            Console.WriteLine($"{numbers[i]} => {roundNums[i]}");
+        }
+
+		
+
+	}
+}
