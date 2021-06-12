@@ -1,0 +1,35 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+  int num = int.Parse(Console.ReadLine());
+		Console.WriteLine(1);
+		if (num == 1)
+            {
+                return;
+            }
+		 int[] Array = new int[] { 1, 1 };
+		Console.WriteLine(string.Join(" ", Array));
+            if (num == 2)
+            {
+                return;
+            }
+		 
+		for(int i = 3 ; i <= num; i++)
+		{
+				 int[] newArray = new int[Array.Length + 1];
+ 
+                    for (int j = 1; j < newArray.Length - 1; j++)
+                    {
+						newArray[0] = 1;
+                    newArray[newArray.Length - 1] = 1;
+                        newArray[j] = Array[j - 1] + Array[j];
+						 
+					}
+			Console.WriteLine(string.Join(" ", newArray));
+			Array = newArray;
+		}
+	}
+}

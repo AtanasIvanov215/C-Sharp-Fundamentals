@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+					
+public class Program
+{
+	public static void Main()
+	{
+ int number = int.Parse(Console.ReadLine());
+		List<int> newFib = new List<int> {1, 1};
+		
+		for(int i = 2; i < number; i++)
+		{
+				int num1 = newFib[i-1] + newFib[i-2];
+				newFib.Add(num1);
+		}
+		Console.WriteLine(newFib[newFib.Count -1]);
+	}
+}
